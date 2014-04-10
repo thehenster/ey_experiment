@@ -7,13 +7,11 @@ if File.exists?(Rails.root + 'config/redis.yml')
   if redis_config
     Sidekiq.configure_server do |config|
       config.redis = {
-         namespace: "<yournamespace>",
          url: "redis://#{redis_config['host']}:#{redis_config['port']}"
       }
     end
     Sidekiq.configure_client do |config|
       config.redis = {
-         namespace: "<yournamespace>",
          url: "redis://#{redis_config['host']}:#{redis_config['port']}"
       }
     end

@@ -29,6 +29,8 @@ gem 'turbolinks'
 gem 'jbuilder', '~> 1.2'
 
 gem 'whenever', :require => false
+
+gem 'redis'
 gem 'sidekiq'
 
 group :doc do
